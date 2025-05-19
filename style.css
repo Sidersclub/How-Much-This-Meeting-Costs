@@ -11,7 +11,7 @@ body{font-family:"Poppins",sans-serif;background:var(--bg);color:var(--fg);paddi
 .subtitle{font-size:.9rem;color:var(--fg-dim);margin-bottom:24px;font-weight:400}
 
 /* —— Animation orbites —— */
-.orbit-container{width:100%;max-width:300px;margin:0 auto 12px}          /* <— marge réduite */
+.orbit-container{width:100%;max-width:300px;margin:2px auto;}          /* <— marge réduite */
 svg{width:100%;height:auto}
 svg path{stroke:var(--fg-dim);stroke-width:.4;fill:none}
 svg .trail{display:none}
