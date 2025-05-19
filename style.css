@@ -1,61 +1,55 @@
 /* —— Palette & reset —— */
-:root{
-  --accent:#DEBA52;
-  --bg:#000;
-  --fg:#F5F5F5;
-  --fg-dim:#8E8E8E;
-  --border:#555;
-}
+:root{--accent:#DEBA52;--bg:#000;--fg:#F5F5F5;--fg-dim:#8E8E8E;--border:#555;}
 *{box-sizing:border-box;margin:0;padding:0}
-body{
-  font-family:"Poppins",sans-serif;
-  background:var(--bg); color:var(--fg);
-  padding:20px; letter-spacing:.4px; -webkit-font-smoothing:antialiased;
-}
+body{font-family:"Poppins",sans-serif;background:var(--bg);color:var(--fg);padding:20px;letter-spacing:.4px;-webkit-font-smoothing:antialiased}
 
 /* —— Conteneur & titres —— */
 .calculator-container{max-width:540px;margin:40px auto;padding:24px 32px;border:1px solid var(--border);border-radius:8px;text-align:center}
 .title{font-size:2rem;font-weight:700;letter-spacing:.08em;margin-bottom:4px;position:relative}
 .title::after{content:"_";color:var(--accent);margin-left:6px;animation:blink 1s step-end infinite}
 @keyframes blink{50%{opacity:0}}
-.subtitle{font-size:.9rem;color:var(--fg-dim);margin-bottom:28px;font-weight:400}
+.subtitle{font-size:.9rem;color:var(--fg-dim);margin-bottom:24px;font-weight:400}
 
 /* —— Animation orbites —— */
-.orbit-container{width:100%;max-width:300px;margin:8px auto}
+.orbit-container{width:100%;max-width:300px;margin:0 auto 12px}          /* <— marge réduite */
 svg{width:100%;height:auto}
 svg path{stroke:var(--fg-dim);stroke-width:.4;fill:none}
 svg .trail{display:none}
-svg g > circle:nth-of-type(1){r:2px;}
-svg g > circle:nth-of-type(2){r:3px;}
-svg g > circle:nth-of-type(3){r:4px;}
-svg g > circle:nth-of-type(4){r:5px;}
-svg g > circle:nth-of-type(5){r:6px;}
+svg g>circle:nth-of-type(1){r:2px}svg g>circle:nth-of-type(2){r:3px}svg g>circle:nth-of-type(3){r:4px}svg g>circle:nth-of-type(4){r:5px}svg g>circle:nth-of-type(5){r:6px}
 
 /* —— UI —— */
-.duration-input-container{margin:24px 0;text-align:left}
+.duration-input-container{margin:20px 0;text-align:left}
 .duration-label{font-weight:700;font-size:.85rem;display:block;margin-bottom:6px}
 #duration-minutes{width:100%;padding:10px;border:1px solid var(--border);border-radius:4px;background:transparent;color:var(--fg);font-size:1rem}
 
+/* En-tête colonnes */
+.participant-head{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:6px;font-size:.75rem;text-transform:uppercase;color:var(--fg-dim);letter-spacing:.04em}
+.participant-head .head-name{flex:1 1 140px;min-width:120px}
+.participant-head .head-salary{width:100px}
+.participant-head .head-type{width:80px}
+.participant-head .head-hours{width:80px}
+.participant-head .head-remove{width:24px}
+
+/* Lignes participants */
 #participants-container{margin-bottom:8px}
 .participant-row{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px;align-items:center}
 .participant-row input,.participant-row select{padding:8px;border:1px solid var(--border);border-radius:4px;background:transparent;color:var(--fg);font-size:.85rem}
-.participant-row input[type="number"]{width:100px}
-.participant-row input[name="name"]{flex:1 1 140px;min-width:120px}
+.participant-row input[type=number]{width:100px}
+.participant-row input[name=name]{flex:1 1 140px;min-width:120px}
 .participant-row .hours-input{width:80px}
-.participant-row .remove-btn{border:none;background:transparent;color:var(--fg-dim);cursor:pointer;font-size:1rem}
+.participant-row .remove-btn{border:none;background:transparent;color:var(--fg-dim);cursor:pointer;font-size:1rem;width:24px}
 
-.add-button{display:block;width:100%;padding:12px 0;margin:16px 0;border:1px solid var(--accent);background:transparent;color:var(--accent);font-weight:700;font-size:.9rem;cursor:pointer;border-radius:4px;transition:.2s}
+.add-button{display:block;width:100%;padding:12px 0;margin:12px 0 16px;border:1px solid var(--accent);background:transparent;color:var(--accent);font-weight:700;font-size:.9rem;cursor:pointer;border-radius:4px;transition:.2s}
 .add-button:hover{background:var(--accent);color:var(--bg)}
 
-.total-container{text-align:center;margin-top:32px}
-.total-label{font-size:.9rem;color:var(--fg-dim);margin-bottom:8px}
+.total-container{text-align:center;margin-top:28px}
+.total-label{font-size:.9rem;color:var(--fg-dim);margin-bottom:6px}
 .total-cost{font-size:2.4rem;font-weight:700;color:var(--accent)}
 
 /* —— Footer —— */
 .footer{margin-top:8px;text-align:center;font-size:.8rem;color:var(--fg-dim)}
-.footer a{color:var(--accent);text-decoration:none}
-.footer a:hover{text-decoration:underline}
+.footer a{color:var(--accent);text-decoration:none}.footer a:hover{text-decoration:underline}
 
 /* —— Highlight —— */
 .highlight{position:relative;display:inline-block}
-.highlight::before{content:"";position:absolute;left:-2px;right:-2px;bottom:.1em;height:55%;background:var(--accent);transform:skew(-3deg);z-index:-1}
+.highlight::before{content:\"\";position:absolute;left:-2px;right:-2px;bottom:.1em;height:55%;background:var(--accent);transform:skew(-3deg);z-index:-1}
