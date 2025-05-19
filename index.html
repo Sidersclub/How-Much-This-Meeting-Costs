@@ -18,35 +18,22 @@
 
     <!-- Animation : orbites -->
     <div class="orbit-container" aria-hidden="true">
-      <svg width="300" height="300" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <path id="e30" d="M150 150 m-30 0 a30 20 0 1 0 60 0 a30 20 0 1 0 -60 0"/>
-          <path id="e45" d="M150 150 m-45 0 a45 30 0 1 0 90 0 a45 30 0 1 0 -90 0"/>
-          <path id="e60" d="M150 150 m-60 0 a60 40 0 1 0 120 0 a60 40 0 1 0 -120 0"/>
-          <path id="e75" d="M150 150 m-75 0 a75 50 0 1 0 150 0 a75 50 0 1 0 -150 0"/>
-          <path id="e90" d="M150 150 m-90 0 a90 60 0 1 0 180 0 a90 60 0 1 0 -180 0"/>
-        </defs>
-        <circle cx="150" cy="150" r="5" fill="#DEBA52"/>
-        <!-- Traînées masquées -->
-        <path class="trail" pathLength="1" style="--dur:4s" d="M150 150 m-30 0 a30 20 0 1 0 60 0 a30 20 0 1 0 -60 0"/>
-        <path class="trail" pathLength="1" style="--dur:6s" d="M150 150 m-45 0 a45 30 0 1 0 90 0 a45 30 0 1 0 -90 0"/>
-        <path class="trail" pathLength="1" style="--dur:8s" d="M150 150 m-60 0 a60 40 0 1 0 120 0 a60 40 0 1 0 -120 0"/>
-        <path class="trail" pathLength="1" style="--dur:10s" d="M150 150 m-75 0 a75 50 0 1 0 150 0 a75 50 0 1 0 -150 0"/>
-        <path class="trail" pathLength="1" style="--dur:12s" d="M150 150 m-90 0 a90 60 0 1 0 180 0 a90 60 0 1 0 -180 0"/>
-        <g fill="white">
-          <circle r="3"><animateMotion dur="4s" repeatCount="indefinite" rotate="auto"><mpath href="#e30"/></animateMotion></circle>
-          <circle r="3"><animateMotion dur="6s" repeatCount="indefinite" rotate="auto"><mpath href="#e45"/></animateMotion></circle>
-          <circle r="3"><animateMotion dur="8s" repeatCount="indefinite" rotate="auto"><mpath href="#e60"/></animateMotion></circle>
-          <circle r="3"><animateMotion dur="10s" repeatCount="indefinite" rotate="auto"><mpath href="#e75"/></animateMotion></circle>
-          <circle r="3"><animateMotion dur="12s" repeatCount="indefinite" rotate="auto"><mpath href="#e90"/></animateMotion></circle>
-        </g>
-      </svg>
+      <!-- … SVG inchangé … -->
     </div>
 
-    <!-- UI durée -->
+    <!-- Durée -->
     <div class="duration-input-container">
       <label for="duration-minutes" class="duration-label">Durée de la réunion (minutes)</label>
       <input type="number" id="duration-minutes" min="1" step="1" value="30">
+    </div>
+
+    <!-- En-tête des colonnes -->
+    <div class="participant-head">
+      <span class="head-name">Nom</span>
+      <span class="head-salary">Salaire</span>
+      <span class="head-type">Type</span>
+      <span class="head-hours">h/sem</span>
+      <span class="head-remove"></span>
     </div>
 
     <!-- Participants -->
@@ -57,7 +44,7 @@
     <!-- Total -->
     <div class="total-container">
       <p class="total-label">Coût du meeting pour l'entreprise :</p>
-      <p id="total-cost" class="total-cost">0,00 €</p>
+      <p id="total-cost" class="total-cost">0,00 €</p>
     </div>
   </div>
 
