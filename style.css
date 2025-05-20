@@ -1,5 +1,5 @@
 /* —— Palette & reset —— */
-:root{--accent:#DEBA52;--bg:#000;--fg:#F5F5F5;--fg-dim:#8E8E8E;--border:#555;}
+:root{--accent:#98d4ac;--bg:#000;--fg:#F5F5F5;--fg-dim:#8E8E8E;--border:#555;}
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:"Poppins",sans-serif;background:var(--bg);color:var(--fg);padding:20px;letter-spacing:.4px;-webkit-font-smoothing:antialiased}
 
